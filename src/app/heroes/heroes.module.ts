@@ -7,6 +7,7 @@ import { LayoutPageComponent } from './pages/layout-Page/layout-Page.component';
 import { ListPagesComponent } from './pages/list-Pages/list-Pages.component';
 import { NewPageComponent } from './pages/new-Page/new-Page.component';
 import { SearchPageComponent } from './pages/searchPage/searchPage.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SearchPageComponent } from './pages/searchPage/searchPage.component';
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    MaterialModule
   ]
 })
 export class HeroesModule { }
