@@ -18,7 +18,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     SharedModule
   ],
   providers: [
-    provideClientHydration(),
+    // provideClientHydration(),
     provideAnimationsAsync(),
     provideHttpClient(withInterceptorsFromDi())
   ],
