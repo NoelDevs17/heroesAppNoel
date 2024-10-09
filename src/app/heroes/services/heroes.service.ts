@@ -29,4 +29,9 @@ export class HeroesServices {
     return this.httpClient.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&_limit=6`)
   }
 
+addHero(hero:Hero): Observable<Hero>{
+  return this.httpClient.post<Hero>(`${this.baseUrl}/heroes`, hero)
+}
+
+
 }
