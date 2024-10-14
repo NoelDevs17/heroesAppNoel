@@ -13,6 +13,7 @@ export class HeroesServices {
   constructor(private httpClient: HttpClient) { }
 
   getHeroes(): Observable<Hero[]>{
+
     return this.httpClient.get<Hero[]>(`${this.baseUrl}/heroes`)
   }
 
@@ -28,24 +29,27 @@ export class HeroesServices {
     return this.httpClient.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&_limit=6`)
   }
 
-  addHero(hero:Hero):Observable<Hero>{
-    return this.httpClient.post<Hero>(`${this.baseUrl}/heroes`,hero);
-  }
 
-  updateHero(hero:Hero):Observable<Hero>{
-    if(!hero.id){throw Error ('Hero id is required')}
-    return this.httpClient.patch<Hero>(`${this.baseUrl}/heroes/${hero.id}`,hero);
-  }
 
-  deleteHeroById(id: string):Observable<boolean>{
+addHero(hero:Hero):Observable<Hero>{
+  return this.httpClient.post<Hero>(`${this.baseUrl}/heroes`,hero);
+}
 
-    return this.httpClient.delete(`${this.baseUrl}/heroes/${id}`)
-    .pipe(
-      catchError(err => of(false)),
-      map(() => true)
-      );
+updateHero(hero:Hero):Observable<Hero>{
+  if(!hero.id){throw Error ('Hero id is required')}
+  return this.httpClient.patch<Hero>(`${this.baseUrl}/heroes/${hero.id}`,hero);
+}
 
-  }
+deleteHeroById(id: string):Observable<boolean>{
+
+  return this.httpClient.delete(`${this.baseUrl}/heroes/${id}`)
+  .pipe(
+    catchError(err => of(false)),
+    map(() => true)
+    );
+
+}
 
 
 }
+

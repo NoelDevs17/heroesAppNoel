@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesServices } from '../../services/herores.service';
+import { HeroesServices } from '../../services/heroes.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { delay, switchMap } from 'rxjs';
 import { Hero } from '../../interfaces/hero.interface';
