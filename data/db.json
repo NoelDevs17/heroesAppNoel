@@ -116,9 +116,10 @@
       "id": "marvel-thor",
       "superhero": "Thor",
       "publisher": "Marvel Comics",
-      "alter_ego": "Thor Odinson",
+      "alter_ego": "Thor Odinson fsf",
       "first_appearance": "Journey into Myster #83",
-      "characters": "Thor Odinson"
+      "characters": "Thor Odinson",
+      "alt_img": null
     },
     {
       "id": "marvel-hulk",
